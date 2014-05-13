@@ -75,7 +75,7 @@
       _badge.text = [NSString stringWithFormat:@"%d", _tabItem.badgeNumber];
 
     } else {
-      _badge.text = [NSString stringWithFormat:@"%d+", kMaxBadgeNumber];
+      _badge.text = [NSString stringWithFormat:@"%ld+", (long)kMaxBadgeNumber];
     }
     [_badge sizeToFit];
 
@@ -99,6 +99,10 @@
   [self updateBadgeNumber];
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)tabItemBadgeNumberChanged:(TTTabItem*)item {
+        [self updateBadgeNumber];
+}
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////

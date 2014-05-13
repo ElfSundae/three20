@@ -155,7 +155,7 @@ TT_FIX_CATEGORY_BUG(UIViewControllerAdditions)
     return parent;
 
   } else {
-    NSString* key = [NSString stringWithFormat:@"%d", self.hash];
+    NSString* key = [NSString stringWithFormat:@"%lu", (unsigned long)self.hash];
     return [gSuperControllers objectForKey:key];
   }
 }
@@ -163,7 +163,7 @@ TT_FIX_CATEGORY_BUG(UIViewControllerAdditions)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setSuperController:(UIViewController*)viewController {
-  NSString* key = [NSString stringWithFormat:@"%d", self.hash];
+  NSString* key = [NSString stringWithFormat:@"%lu", (unsigned long)self.hash];
   if (nil != viewController) {
     if (nil == gSuperControllers) {
       gSuperControllers = TTCreateNonRetainingDictionary();
@@ -213,14 +213,14 @@ TT_FIX_CATEGORY_BUG(UIViewControllerAdditions)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (UIViewController*)popupViewController {
-  NSString* key = [NSString stringWithFormat:@"%d", self.hash];
+  NSString* key = [NSString stringWithFormat:@"%lu", (unsigned long)self.hash];
   return [gPopupViewControllers objectForKey:key];
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setPopupViewController:(UIViewController*)viewController {
-  NSString* key = [NSString stringWithFormat:@"%d", self.hash];
+  NSString* key = [NSString stringWithFormat:@"%lu", (unsigned long)self.hash];
   if (viewController) {
     if (!gPopupViewControllers) {
       gPopupViewControllers = TTCreateNonRetainingDictionary();
@@ -347,7 +347,7 @@ TT_FIX_CATEGORY_BUG(UIViewControllerAdditions)
 + (void)doGarbageCollectionWithSelector:(SEL)selector controllerSet:(NSMutableSet*)controllers {
   if ([controllers count] > 0) {
     TTDCONDITIONLOG(TTDFLAG_CONTROLLERGARBAGECOLLECTION,
-                    @"Checking %d controllers for garbage.", [controllers count]);
+                    @"Checking %lu controllers for garbage.", (unsigned long)[controllers count]);
 
     NSSet* fullControllerList = [controllers copy];
     for (UIViewController* controller in fullControllerList) {
@@ -356,7 +356,7 @@ TT_FIX_CATEGORY_BUG(UIViewControllerAdditions)
       NSInteger retainCount = [controller retainCount] - 1;
 
       TTDCONDITIONLOG(TTDFLAG_CONTROLLERGARBAGECOLLECTION,
-                      @"Retain count for %X is %d", (unsigned int)controller, retainCount);
+                      @"Retain count for %X is %ld", (unsigned int)controller, (long)retainCount);
 
       if (retainCount == 1) {
         // If this fails, you've somehow added a controller that doesn't use

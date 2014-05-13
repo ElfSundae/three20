@@ -137,14 +137,14 @@ TT_FIX_CATEGORY_BUG(UIViewController_TTNavigator)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString*)originalNavigatorURL {
-  NSString* key = [NSString stringWithFormat:@"%d", self.hash];
+  NSString* key = [NSString stringWithFormat:@"%lu", (unsigned long)self.hash];
   return [gNavigatorURLs objectForKey:key];
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setOriginalNavigatorURL:(NSString*)URL {
-  NSString* key = [NSString stringWithFormat:@"%d", self.hash];
+  NSString* key = [NSString stringWithFormat:@"%lu", (unsigned long)self.hash];
   if (nil != URL) {
     if (nil == gNavigatorURLs) {
       gNavigatorURLs = [[NSMutableDictionary alloc] init];

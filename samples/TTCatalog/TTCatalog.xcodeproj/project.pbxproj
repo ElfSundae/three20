@@ -60,6 +60,7 @@
 		BEF6EC370F280CB300CF4096 /* ScrollViewTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF6EC360F280CB300CF4096 /* ScrollViewTestController.m */; };
 		E46662FE127F91A4001A0F20 /* TableWithBannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E46662FD127F91A4001A0F20 /* TableWithBannerController.m */; };
 		E4D1D1D61306D2670090AE0C /* TableDragRefreshController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D1D1D51306D2670090AE0C /* TableDragRefreshController.m */; };
+		E7A3BCF81922DD8900CFB3D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A3BCF71922DD8900CFB3D8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -301,6 +302,7 @@
 		E46662FD127F91A4001A0F20 /* TableWithBannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableWithBannerController.m; sourceTree = "<group>"; };
 		E4D1D1D41306D2670090AE0C /* TableDragRefreshController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDragRefreshController.h; sourceTree = "<group>"; };
 		E4D1D1D51306D2670090AE0C /* TableDragRefreshController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDragRefreshController.m; sourceTree = "<group>"; };
+		E7A3BCF71922DD8900CFB3D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +358,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				E7A3BCF71922DD8900CFB3D8 /* Default-568h@2x.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				6E7F995E118E3A4800443B46 /* Configurations */,
@@ -968,6 +971,7 @@
 				BEDCFBB40F4FFF820060B7D1 /* Three20.bundle in Resources */,
 				BE3188A10F822E2C00E3067D /* smiley.png in Resources */,
 				BE1289C20F91811E00F65EA2 /* mask.png in Resources */,
+				E7A3BCF81922DD8900CFB3D8 /* Default-568h@2x.png in Resources */,
 				BEA6BA7F101431DA00B83B3A /* defaultPerson.png in Resources */,
 				BEA6BAAD101436AC00B83B3A /* defaultMusic.png in Resources */,
 				6E94C6AD116D98220012B12C /* Default.png in Resources */,
@@ -1071,7 +1075,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1085,7 +1088,6 @@
 				COPY_PHASE_STRIP = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

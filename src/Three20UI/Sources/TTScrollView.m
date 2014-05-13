@@ -30,12 +30,12 @@
 static const NSInteger kOffscreenPages = 1;
 static const CGFloat kDefaultPageSpacing = 40.0f;
 static const CGFloat kFlickThreshold = 60.0f;
-static const CGFloat kTapZoom = 0.75f;
+//static const CGFloat kTapZoom = 0.75f;
 static const CGFloat kResistance = 0.15f;
 static const NSInteger kInvalidIndex = -1;
 static const NSTimeInterval kFlickDuration = 0.4;
 static const NSTimeInterval kBounceDuration = 0.3;
-static const NSTimeInterval kOvershoot = 2;
+//static const NSTimeInterval kOvershoot = 2;
 static const CGFloat kIncreaseSpeed = 1.5f;    // How much increase after release touch.
                                               // (Residual movement).
 static const CGFloat kFrameDuration = 1.0/40.0f;
@@ -507,14 +507,14 @@ static const CGFloat kFrameDuration = 1.0/40.0f;
       if (indexDiff > 0) {
         NSInteger edgeIndex = _centerPageIndex - kOffscreenPages;
         NSInteger newEdgeIndex = pageIndex - kOffscreenPages;
-        for (int i = edgeIndex; i < newEdgeIndex; ++i) {
+        for (NSInteger i = edgeIndex; i < newEdgeIndex; ++i) {
           [self enqueuePageAtIndex:i];
         }
 
       } else if (indexDiff < 0) {
         NSInteger edgeIndex = _centerPageIndex + kOffscreenPages;
         NSInteger newEdgeIndex = pageIndex + kOffscreenPages;
-        for (int i = edgeIndex; i > newEdgeIndex; --i) {
+        for (NSInteger i = edgeIndex; i > newEdgeIndex; --i) {
           [self enqueuePageAtIndex:i];
         }
       }
@@ -1689,14 +1689,14 @@ static const CGFloat kFrameDuration = 1.0/40.0f;
 
   UIView* centerPage = self.centerPage;
   if (centerPage) {
-    [visiblePages setObject:self.centerPage forKey:[NSNumber numberWithInt:_centerPageIndex]];
+    [visiblePages setObject:self.centerPage forKey:[NSNumber numberWithInteger:_centerPageIndex]];
   }
 
   NSInteger minPageIndex = _centerPageIndex - kOffscreenPages;
   for (NSInteger i = _centerPageIndex - 1; i >= 0 && i >= minPageIndex; --i) {
     UIView* page = [self pageAtIndex:i create:YES];
     if (page) {
-      [visiblePages setObject:page forKey:[NSNumber numberWithInt:i]];
+      [visiblePages setObject:page forKey:[NSNumber numberWithInteger:i]];
     }
   }
 
@@ -1705,7 +1705,7 @@ static const CGFloat kFrameDuration = 1.0/40.0f;
   for (NSInteger i = _centerPageIndex + 1; i < pageCount && i <= maxPageIndex; ++i) {
     UIView* page = [self pageAtIndex:i create:YES];
     if (page) {
-      [visiblePages setObject:page forKey:[NSNumber numberWithInt:i]];
+      [visiblePages setObject:page forKey:[NSNumber numberWithInteger:i]];
     }
   }
 

@@ -124,7 +124,7 @@ static const NSInteger kMaxBadgeNumber = 99;
                                                          invertedSet]];
 
     if (range.location == NSNotFound && _item.badgeNumber > kMaxBadgeNumber) {
-      badgeText = [NSString stringWithFormat:@"%d+", kMaxBadgeNumber];
+      badgeText = [NSString stringWithFormat:@"%ld+", (long)kMaxBadgeNumber];
 
     } else {
       badgeText = badgeValue;

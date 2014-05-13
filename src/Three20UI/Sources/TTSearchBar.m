@@ -35,7 +35,7 @@
 #import "Three20Core/TTGlobalCoreLocale.h"
 
 static const CGFloat kMarginX   = 5.0f;
-static const CGFloat kMarginY   = 7.0f;
+//static const CGFloat kMarginY   = 7.0f;
 static const CGFloat kPaddingX  = 10.0f;
 static const CGFloat kPaddingY  = 10.0f;
 static const CGFloat kSpacingX  = 4.0f;

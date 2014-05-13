@@ -63,7 +63,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)updateTabStyles {
   CGFloat columnCount = [self columnCount];
-  int rowCount = [self rowCount];
+  int rowCount = (int)[self rowCount];
   int cellCount = rowCount * columnCount;
 
   if (self.tabViews.count > columnCount) {

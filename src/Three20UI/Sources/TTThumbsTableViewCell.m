@@ -177,7 +177,7 @@ static const CGFloat kDefaultThumbSize = 75.0f;
       [self.contentView addSubview:thumbView];
       [_thumbViews addObject:thumbView];
       if (_photo) {
-        [self assignPhotoAtIndex:_photo.index+i toView:thumbView];
+        [self assignPhotoAtIndex:(int)(_photo.index+i) toView:thumbView];
       }
     }
   }
@@ -199,7 +199,7 @@ static const CGFloat kDefaultThumbSize = 75.0f;
 
     NSInteger i = 0;
     for (TTThumbView* thumbView in _thumbViews) {
-      [self assignPhotoAtIndex:_photo.index+i toView:thumbView];
+      [self assignPhotoAtIndex:(int)(_photo.index+i) toView:thumbView];
       ++i;
     }
   }

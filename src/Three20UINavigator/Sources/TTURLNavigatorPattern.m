@@ -189,7 +189,7 @@ static NSString* kUniversalURLPattern = @"*";
 
     } else {
       char argType[256];
-      method_getArgumentType(method, wildcard.argIndex+2, argType, 256);
+      method_getArgumentType(method, (unsigned)wildcard.argIndex+2, argType, 256);
       wildcard.argType = TTConvertArgumentType(argType[0]);
     }
   }

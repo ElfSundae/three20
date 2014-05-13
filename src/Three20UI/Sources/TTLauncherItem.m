@@ -129,7 +129,7 @@
     [self setBadgeValue:nil];
 
   } else {
-    [self setBadgeValue:[NSString stringWithFormat:@"%d",badgeNumber]];
+    [self setBadgeValue:[NSString stringWithFormat:@"%ld",(long)badgeNumber]];
   }
 }
 

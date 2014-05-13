@@ -69,8 +69,7 @@
 - (void)setBadgeNumber:(int)value {
   value = value < 0 ? 0 : value;
   _badgeNumber = value;
-  [_tabBar performSelector:@selector(tabItem:badgeNumberChangedTo:) withObject:self
-                withObject:(id)value];
+  [_tabBar performSelector:@selector(tabItemBadgeNumberChanged:) withObject:self];
 }
 
 
