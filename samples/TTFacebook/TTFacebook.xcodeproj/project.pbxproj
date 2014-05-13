@@ -31,6 +31,7 @@
 		6E5F1F8B117FBE4D004BEBA9 /* Atlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F1F8A117FBE4D004BEBA9 /* Atlas.m */; };
 		6E64628D1187E0E600F08CB1 /* libextThree20JSON+YAJL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E64628A1187DF2C00F08CB1 /* libextThree20JSON+YAJL.a */; };
 		6E7F9827118E386E00443B46 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7F981A118E385E00443B46 /* libThree20.a */; };
+		E7A3BCD91922D5AE00CFB3D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A3BCD81922D5AE00CFB3D8 /* Default-568h@2x.png */; };
 		EB383B6510BBF62B0000B2D2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB383B6410BBF62B0000B2D2 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -271,6 +272,7 @@
 		6E6462941187E1F200F08CB1 /* TTFacebook_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTFacebook_Prefix.pch; path = Headers/TTFacebook_Prefix.pch; sourceTree = "<group>"; };
 		6E7F97F5118E385E00443B46 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = ../../src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* TTFacebook-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TTFacebook-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		E7A3BCD81922D5AE00CFB3D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EB383B6410BBF62B0000B2D2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -319,6 +321,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				E7A3BCD81922D5AE00CFB3D8 /* Default-568h@2x.png */,
 				6E5F1F88117FBE46004BEBA9 /* Atlas */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -786,6 +789,7 @@
 				6E08B48F118288A300DA1579 /* Icon.png in Resources */,
 				6E08361111B4C63400B99C32 /* extThree20CSSStyle.bundle in Resources */,
 				6E08373211B4D18D00B99C32 /* stylesheet.css in Resources */,
+				E7A3BCD91922D5AE00CFB3D8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

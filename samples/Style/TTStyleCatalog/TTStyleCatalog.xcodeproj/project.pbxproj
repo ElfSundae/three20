@@ -27,6 +27,7 @@
 		6E850FB811B1795F0071A4FD /* Atlas.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E850FB711B1795F0071A4FD /* Atlas.m */; };
 		6E850FD211B17A450071A4FD /* StyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E850FD111B17A450071A4FD /* StyleViewController.m */; };
 		6E850FFC11B17CBE0071A4FD /* StyleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E850FFB11B17CBE0071A4FD /* StyleView.m */; };
+		E7A3BCD31922D53200CFB3D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A3BCD21922D53200CFB3D8 /* Default-568h@2x.png */; };
 		EB383B6510BBF62B0000B2D2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB383B6410BBF62B0000B2D2 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -213,6 +214,7 @@
 		6E850FFB11B17CBE0071A4FD /* StyleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleView.m; sourceTree = "<group>"; };
 		6E8513D111B19B080071A4FD /* TTStyleCatalog_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTStyleCatalog_Prefix.pch; path = Headers/TTStyleCatalog_Prefix.pch; sourceTree = "<group>"; };
 		6E8513D211B19B0E0071A4FD /* TTStyleCatalog-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TTStyleCatalog-Info.plist"; sourceTree = "<group>"; };
+		E7A3BCD21922D53200CFB3D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EB383B6410BBF62B0000B2D2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -261,6 +263,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				E7A3BCD21922D53200CFB3D8 /* Default-568h@2x.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				6E850F4D11B176030071A4FD /* Configurations */,
@@ -630,6 +633,7 @@
 				6E850F4F11B1761D0071A4FD /* Three20.bundle in Resources */,
 				6E850FAE11B176F10071A4FD /* Default.png in Resources */,
 				6E850FAF11B176F10071A4FD /* Icon.png in Resources */,
+				E7A3BCD31922D53200CFB3D8 /* Default-568h@2x.png in Resources */,
 				665E980D12662D0C0025FA42 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,6 +27,7 @@
 		BE8FCAB910017846000767AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8FCAB810017846000767AD /* AppDelegate.m */; };
 		BEBB0E421002B93F00744230 /* ContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBB0E411002B93F00744230 /* ContentController.m */; };
 		BEDCFBB40F4FFF820060B7D1 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEDCFBB30F4FFF820060B7D1 /* Three20.bundle */; };
+		E7A3BCD71922D5AB00CFB3D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A3BCD61922D5AB00CFB3D8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,7 @@
 		BEBB0E401002B93F00744230 /* ContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentController.h; sourceTree = "<group>"; };
 		BEBB0E411002B93F00744230 /* ContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentController.m; sourceTree = "<group>"; };
 		BEDCFBB30F4FFF820060B7D1 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = ../../src/Three20.bundle; sourceTree = SOURCE_ROOT; };
+		E7A3BCD61922D5AB00CFB3D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				E7A3BCD61922D5AB00CFB3D8 /* Default-568h@2x.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				6E7F9892118E38D300443B46 /* Configurations */,
@@ -586,6 +589,7 @@
 				BEDCFBB40F4FFF820060B7D1 /* Three20.bundle in Resources */,
 				BE7DD6131002182300662212 /* tab.png in Resources */,
 				6E94C717116D98440012B12C /* Default.png in Resources */,
+				E7A3BCD71922D5AB00CFB3D8 /* Default-568h@2x.png in Resources */,
 				6E94C718116D98440012B12C /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

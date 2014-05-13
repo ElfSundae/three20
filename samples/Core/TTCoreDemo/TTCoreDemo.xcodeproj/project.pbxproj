@@ -18,6 +18,7 @@
 		6EEFB94411627E29009B479E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEFB94311627E29009B479E /* UIKit.framework */; };
 		6EEFBAEC11627F2E009B479E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEFBAEB11627F2E009B479E /* CoreGraphics.framework */; };
 		6EEFBBAB1162829A009B479E /* PlaygroundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEFBBAA1162829A009B479E /* PlaygroundViewController.m */; };
+		E7A3BCD51922D53500CFB3D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A3BCD41922D53500CFB3D8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		6EEFBBA91162829A009B479E /* PlaygroundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaygroundViewController.h; sourceTree = "<group>"; };
 		6EEFBBAA1162829A009B479E /* PlaygroundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaygroundViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TTCoreDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TTCoreDemo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		E7A3BCD41922D53500CFB3D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				E7A3BCD41922D53500CFB3D8 /* Default-568h@2x.png */,
 				6EEFBB8B11628138009B479E /* README.mdown */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -265,6 +268,7 @@
 				6E94C67A116D97FF0012B12C /* Default.png in Resources */,
 				6E94C67B116D97FF0012B12C /* Icon.png in Resources */,
 				6E64601B1187B3CD00F08CB1 /* Three20.bundle in Resources */,
+				E7A3BCD51922D53500CFB3D8 /* Default-568h@2x.png in Resources */,
 				668DCFEB1262FA51004C9828 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -37,6 +37,7 @@
 		CC85D725116830A300D3FE00 /* DemoMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC85D723116830A300D3FE00 /* DemoMessageController.m */; };
 		CC85D726116830A300D3FE00 /* DemoMessageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC85D724116830A300D3FE00 /* DemoMessageController.xib */; };
 		CC85D8221168373300D3FE00 /* StyleSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = CC85D8211168373300D3FE00 /* StyleSheet.m */; };
+		E7A3BCD11922D52F00CFB3D8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A3BCD01922D52F00CFB3D8 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +235,7 @@
 		CC85D724116830A300D3FE00 /* DemoMessageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DemoMessageController.xib; path = Classes/DemoMessageController.xib; sourceTree = "<group>"; };
 		CC85D8201168373300D3FE00 /* StyleSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyleSheet.h; sourceTree = "<group>"; };
 		CC85D8211168373300D3FE00 /* StyleSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyleSheet.m; sourceTree = "<group>"; };
+		E7A3BCD01922D52F00CFB3D8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +282,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				E7A3BCD01922D52F00CFB3D8 /* Default-568h@2x.png */,
 				CC85D4B411681EC500D3FE00 /* README.mdown */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -697,6 +700,7 @@
 				CC85D4B511681EC500D3FE00 /* README.mdown in Resources */,
 				CC85D4D21168229C00D3FE00 /* FooterTableViewController.xib in Resources */,
 				CC85D5F311682A2500D3FE00 /* DemoPostController.xib in Resources */,
+				E7A3BCD11922D52F00CFB3D8 /* Default-568h@2x.png in Resources */,
 				CC85D6D511682DCA00D3FE00 /* DemoViewController.xib in Resources */,
 				CC85D6E611682E9B00D3FE00 /* blueArrow.png in Resources */,
 				CC85D726116830A300D3FE00 /* DemoMessageController.xib in Resources */,
