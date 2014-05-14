@@ -31,6 +31,9 @@
          location = "group:src/scripts"
          name = "scripts">
          <FileRef
+            location = "group:build_fat.sh">
+         </FileRef>
+         <FileRef
             location = "group:Build.command">
          </FileRef>
          <FileRef

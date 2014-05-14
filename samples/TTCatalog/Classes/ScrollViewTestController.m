@@ -109,7 +109,7 @@
 #pragma mark TTPageControl
 
 - (IBAction)changePage:(id)sender {
-  int page = _pageControl.currentPage;
+  NSInteger page = _pageControl.currentPage;
   [_scrollView setCenterPageIndex:page];
 }
 

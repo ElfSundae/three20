@@ -188,7 +188,7 @@ const NSTimeInterval TTURLRequestUseQueueTimeout = -1.0;
                      name]
                      dataUsingEncoding:_charsetForMultipart]];
   [body appendData:[[NSString
-                      stringWithFormat:@"Content-Length: %d\r\n", data.length]
+                      stringWithFormat:@"Content-Length: %lu\r\n", (unsigned long)data.length]
                      dataUsingEncoding:_charsetForMultipart]];
   [body appendData:[@"Content-Type: image/jpeg\r\n\r\n" dataUsingEncoding:_charsetForMultipart]];
   [body appendData:data];
@@ -244,7 +244,7 @@ const NSTimeInterval TTURLRequestUseQueueTimeout = -1.0;
                        @"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n",
                        fileName, fileName]
           dataUsingEncoding:_charsetForMultipart]];
-    [body appendData:[[NSString stringWithFormat:@"Content-Length: %d\r\n", data.length]
+    [body appendData:[[NSString stringWithFormat:@"Content-Length: %lu\r\n", (unsigned long)data.length]
           dataUsingEncoding:_charsetForMultipart]];
     [body appendData:[[NSString stringWithFormat:@"Content-Type: %@\r\n\r\n", mimeType]
           dataUsingEncoding:_charsetForMultipart]];

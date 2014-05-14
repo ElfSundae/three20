@@ -1,3 +1,40 @@
+***About***
+
+This fork is a continuer of [Facebook/Three20](https://github.com/facebook/three20) library :)
+
+* Fixed building errors or warnings under Xcode 5
+* Distributed as fat static libraries (including `armv7 armv7s arm64 i386 x86_64`), **app's size will increase about 1.3MB.**
+* bug fixes
+
+***Installation***
+
+1. Copy `three20` from `bin` to your project
+2. Config "Building Setting"
+
+ 		OTHER_LDFLAGS = -ObjC
+ 		LIBRARY_SEARCH_PATHS = $(inherited) "$(PROJECT_DIR)/three20"
+ 		HEADER_SEARCH_PATHS = $(inherited) "$(PROJECT_DIR)/three20"
+
+3. Include headers in your code:
+
+		#import "Three20.h"
+		#import "Three20+Additions.h"
+		
+***Build Libraries***
+
+Open `Three20.xcworkspace` in Xcode, select build scheme `TTCatalog`, `Command+B` to build it. 
+After building, right click any target in `Products` -> `Show In Finder` to go to the build directory, then `Command+↑` to go to the parent directory, 
+you can find `three20` there.
+
+***Documentation***
+
+* Online: http://facebook.github.com/three20/api
+* Docset: http://facebook.github.io/three20/api/com.facebook.Three20.atom<br>
+	http://facebook.github.com/three20/api/com.facebook.Three20-1.0.11.xar
+
+
+
+
 Three20
 =======
 

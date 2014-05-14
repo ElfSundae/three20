@@ -370,6 +370,7 @@
 				BEF31F370F352DF5000DE5D2 /* Sources */,
 				668E63EA131A42F500ACE4AB /* Lint */,
 				BEF31F380F352DF5000DE5D2 /* Frameworks */,
+				E79EE5DF1923108800A3D07E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -466,6 +467,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/sh ../scripts/Protect.command";
+			shellScript = "";
+		};
+		E79EE5DF1923108800A3D07E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh ../scripts/build_fat.sh";
 			shellScript = "";
 		};
 		EB9E6C6010B6A8F800DE563C /* ShellScript */ = {
