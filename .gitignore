@@ -25,5 +25,5 @@ extensions/
 Docs
 
 # we don't support xcworkspaces for single projects. Use Three20.xcworkspace instead
-# *.xcworkspace
+*.xcworkspace
 # !Three20.xcworkspace
