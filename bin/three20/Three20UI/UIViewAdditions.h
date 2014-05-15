@@ -17,8 +17,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define Three20_UIView_TTCategory_H
-
 @interface UIView (TTCategory)
 
 /**
