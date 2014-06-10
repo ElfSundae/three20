@@ -22,5 +22,5 @@ SDKROOT = iphoneos
 // Required for older iOS devices (iPhone 3G)
 ARCHS = $(ARCHS_STANDARD)
 //ARCHS[sdk=iphoneos*] = armv7
-VALID_ARCHS = i386 x86_64 armv7 armv7s arm64
+VALID_ARCHS = i386 armv7 armv7s arm64
 
