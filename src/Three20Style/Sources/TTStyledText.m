@@ -360,6 +360,9 @@
                 frame = frame.nextFrame;
         }
         _minimumWidth = ceilf(_minimumWidth);
+        if (_minimumWidth > _width) {
+                _minimumWidth = _width;
+        }
 #endif
   [_invalidImages release];
   _invalidImages = [layout.invalidImages retain];
