@@ -71,6 +71,8 @@
  */
 @property (nonatomic, readonly) CGFloat height;
 
+@property (nonatomic, readonly) CGFloat minimumWidth;
+
 /**
  * Indicates if the text needs layout to recalculate its size.
  */

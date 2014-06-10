@@ -385,7 +385,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGSize)sizeThatFits:(CGSize)size {
   [self layoutIfNeeded];
-  return CGSizeMake(_text.width + (_contentInset.left + _contentInset.right),
+  return CGSizeMake(_text.minimumWidth + (_contentInset.left + _contentInset.right),
                     _text.height+ (_contentInset.top + _contentInset.bottom));
 }
 

@@ -60,6 +60,7 @@
 @synthesize textAlignment = _textAlignment;
 @synthesize width         = _width;
 @synthesize height        = _height;
+@synthesize minimumWidth  = _minimumWidth;
 @synthesize invalidImages = _invalidImages;
 @synthesize delegate      = _delegate;
 
@@ -325,6 +326,12 @@
   return _height;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)minimumWidth {
+        [self layoutIfNeeded];
+        return _minimumWidth;
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (BOOL)needsLayout {
@@ -342,7 +349,18 @@
 
   [_rootFrame release];
   _rootFrame = [layout.rootFrame retain];
-  _height = ceil(layout.height);
+  _height = ceilf(layout.height);
+#if 1 // -Elf, calculate the minimumWidth
+        TTStyledFrame *frame = _rootFrame;
+        while (frame) {
+                CGFloat frameWidth = frame.x + frame.width;
+                if (frameWidth > _minimumWidth) {
+                        _minimumWidth = frameWidth;
+                }
+                frame = frame.nextFrame;
+        }
+        _minimumWidth = ceilf(_minimumWidth);
+#endif
   [_invalidImages release];
   _invalidImages = [layout.invalidImages retain];
   [layout release];
@@ -363,6 +381,7 @@
 - (void)setNeedsLayout {
   TT_RELEASE_SAFELY(_rootFrame);
   _height = 0;
+        _minimumWidth = 0.f;
 }
 
 
