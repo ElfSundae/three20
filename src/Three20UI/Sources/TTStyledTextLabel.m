@@ -344,6 +344,11 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)touchesCancelled:(NSSet*)touches withEvent:(UIEvent*)event {
+#if 1 // -Elf, remove highlightedFrame
+        if (_highlightedNode) {
+                [self setHighlightedFrame:nil];
+        }
+#endif
   [super touchesCancelled:touches withEvent:event];
 }
 
