@@ -30,6 +30,7 @@
   UIFont*         _font;
   UITextAlignment _textAlignment;
   CGFloat         _width;
+        CGFloat         _minimumWidth;
   CGFloat         _height;
   NSMutableArray* _invalidImages;
   NSMutableArray* _imageRequests;
@@ -65,13 +66,16 @@
 @property (nonatomic) CGFloat width;
 
 /**
+ * The minimum width required to display text, it calculated from given width.
+ */
+@property (nonatomic, readonly) CGFloat minimumWidth;
+
+/**
  * The height of the text.
  *
  * The height is automatically calculated based on the width and the size of word-wrapped text.
  */
 @property (nonatomic, readonly) CGFloat height;
-
-@property (nonatomic, readonly) CGFloat minimumWidth;
 
 /**
  * Indicates if the text needs layout to recalculate its size.

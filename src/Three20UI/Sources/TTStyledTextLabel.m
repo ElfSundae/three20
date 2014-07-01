@@ -383,7 +383,10 @@
     self.highlightedNode = nil;
   }
 
-  _text.width = newWidth;
+        if (_text.minimumWidth == 0 || _text.minimumWidth != newWidth) {
+                _text.width = newWidth;
+                [_text layoutIfNeeded];
+        }
 }
 
 

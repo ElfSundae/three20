@@ -80,10 +80,12 @@ This is a test of styled labels.  Styled labels support \
 <b>bold text</b>, <i>italic text</i>, <span class=\"blueText\">colored text</span>, \
 <span class=\"largeText\">font sizes</span>, \
 <span class=\"blueBox\">spans with backgrounds</span>, inline images \
-<img src=\"bundle://smiley.png\"/>, and <a href=\"http://www.google.com\">hyperlinks</a> you can \
+<img src=\"bundle://smiley.png\"/> <img src=\"bundle://smiley.png\"/> <img src=\"bundle://smiley.png\"/>, and <a href=\"http://www.google.com\">hyperlinks</a> you can \
 actually touch. URLs are automatically converted into links, like this: http://www.foo.com\
 <div>You can enclose blocks within an HTML div.</div>\
 Both line break characters\n\nand HTML line breaks<br/>are respected.";
+        //kText = @"<img src=\"bundle://smiley.png\"/><img src=\"bundle://smiley.png\"/>xxx<img src=\"bundle://smiley.png\"/>";
+        
 //  NSString* kText = @"\
 //<span class=\"largeText\">font sizes</span>a";
 //  NSString* kText = @"<span class=\"largeText\">bah</span><span class=\"inlineBox\">hyper links</span>";
@@ -108,14 +110,30 @@ Both line break characters\n\nand HTML line breaks<br/>are respected.";
 
   // XXXjoe This illustrates the need to calculate a line's descender height as well @1079
   // NSString* kText = @"<span class=\"largeText\">bah</span> <span class=\"smallText\">humbug</span>";
+        //kText = @"1 1";
+        TTStyledTextLabel* label1 = [[[TTStyledTextLabel alloc] initWithFrame:self.view.bounds] autorelease];
+        label1.font = [UIFont systemFontOfSize:17];
+        label1.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
+        label1.backgroundColor = [UIColor grayColor];
+        //label1.textAlignment = UITextAlignmentCenter;
 
-  TTStyledTextLabel* label1 = [[[TTStyledTextLabel alloc] initWithFrame:self.view.bounds] autorelease];
-  label1.font = [UIFont systemFontOfSize:17];
-  label1.text = [TTStyledText textFromXHTML:kText lineBreaks:YES URLs:YES];
-  label1.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
-  //label1.backgroundColor = [UIColor grayColor];
-  //label1.textAlignment = UITextAlignmentCenter;
-  [label1 sizeToFit];
+  TTStyledText *text = [TTStyledText textFromXHTML:kText lineBreaks:YES URLs:NO];
+        
+#if 1 // via -[TTStyledText minimumWidth] and -[TTStyledText height]
+        text.width = self.view.bounds.size.width - label1.contentInset.left - label1.contentInset.right;
+        text.font = label1.font;
+        label1.size = CGSizeMake(label1.contentInset.left + label1.contentInset.right +
+                                 text.minimumWidth,
+                                 label1.contentInset.top + label1.contentInset.top +
+                                 text.height);
+        label1.text = text;
+#else // via -sizeToFit
+        
+        label1.text = text;
+        [label1 sizeToFit];
+#endif
+        label1.top = 100;
+        NSLog(@"label frame: %@", NSStringFromCGRect(label1.frame));
   [self.view addSubview:label1];
 }
 

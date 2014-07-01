@@ -328,7 +328,9 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)minimumWidth {
-        [self layoutIfNeeded];
+        if (_width > 0) {
+                [self layoutIfNeeded];
+        }
         return _minimumWidth;
 }
 
@@ -350,19 +352,23 @@
   [_rootFrame release];
   _rootFrame = [layout.rootFrame retain];
   _height = ceilf(layout.height);
-#if 1 // -Elf, calculate the minimumWidth
+        // -Elf, get the minWidth
+        _minimumWidth = ceilf(layout.minWidth);
+#if 0 // -Elf, calculate the minimumWidth
+        CGFloat minWidth;
         TTStyledFrame *frame = _rootFrame;
         while (frame) {
                 CGFloat frameWidth = frame.x + frame.width;
-                if (frameWidth > _minimumWidth) {
-                        _minimumWidth = frameWidth;
+                if (frameWidth > minWidth) {
+                        minWidth = frameWidth;
                 }
                 frame = frame.nextFrame;
         }
-        _minimumWidth = ceilf(_minimumWidth);
-        if (_minimumWidth > _width) {
-                _minimumWidth = _width;
+        minWidth = ceilf(minWidth);
+        if (minWidth > _width) {
+                minWidth = _width;
         }
+        NSLog(@"minWidth:%f _minimumWidth:%f", minWidth, _minimumWidth);
 #endif
   [_invalidImages release];
   _invalidImages = [layout.invalidImages retain];

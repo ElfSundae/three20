@@ -34,6 +34,7 @@
   CGFloat _floatLeftWidth;
   CGFloat _floatRightWidth;
   CGFloat _floatHeight;
+        CGFloat _minWidth; // -Elf added
 
   TTStyledFrame*        _rootFrame;
   TTStyledFrame*        _lineFirstFrame;
@@ -55,6 +56,7 @@
 }
 
 @property (nonatomic)           CGFloat         width;
+@property (nonatomic)           CGFloat         minWidth; // -Elf added
 @property (nonatomic)           CGFloat         height;
 @property (nonatomic, retain)   UIFont*         font;
 @property (nonatomic)           UITextAlignment textAlignment;

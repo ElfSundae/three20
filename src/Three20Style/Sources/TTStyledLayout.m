@@ -48,6 +48,7 @@
 @implementation TTStyledLayout
 
 @synthesize width         = _width;
+@synthesize minWidth            = _minWidth; // -Elf added
 @synthesize height        = _height;
 @synthesize rootFrame     = _rootFrame;
 @synthesize font          = _font;
@@ -198,6 +199,9 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)expandLineWidth:(CGFloat)width {
   _lineWidth += width;
+        if (_lineWidth > _minWidth) {
+                _minWidth = _lineWidth;
+        }
   TTStyledInlineFrame* inlineFrame = _inlineFrame;
   while (inlineFrame) {
     inlineFrame.width += width;
@@ -397,6 +401,9 @@
   }
 
   _height += _lineHeight;
+        if (_lineWidth > _minWidth) {
+                _minWidth = _lineWidth;
+        }
   [self checkFloats];
 
   _lineWidth = 0;
@@ -710,6 +717,7 @@
     [self addFrameForText:text element:element node:textNode width:textSize.width
          height:textSize.height];
     _height += textSize.height;
+          _minWidth += textSize.width;
     return;
   }
 
