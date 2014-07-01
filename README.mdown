@@ -2,12 +2,15 @@
 
 This fork is a continuer of [Facebook/Three20](https://github.com/facebook/three20) library :)
 
-* Fixed building errors or warnings under Xcode 5
-* Distributed as fat static libraries (including `armv7 armv7s arm64 i386`), **app's size will increase about 1.3MB.**
+* Fix building errors or warnings under Xcode 5
+* Distribute as fat static libraries (including `armv7 armv7s arm64 i386`), **app's size will increase about 1.3MB.**
 * Fix bugs
+
+	* **TTStyledLayout**: some bugs on calculating text size.
+	
 * Add features
 
-	* Add `minimumWidth` to TTStyledText, and change `-[TTStyledTextLabel sizeThatFits:]` to return the minimum width.
+	* Add `minimumWidth` in **TTStyledText**, and change `-[TTStyledTextLabel sizeThatFits:]` to return the minimum width.
 
 ***Installation***
 

@@ -101,6 +101,17 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)setMinWidth:(CGFloat)minWidth {
+        if (_minWidth != minWidth) {
+                _minWidth = minWidth;
+                if (_minWidth > _width) {
+                        _minWidth = _width;
+                }
+        }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
 - (UIFont*)boldVersionOfFont:(UIFont*)font {
   // XXXjoe Clearly this doesn't work if your font is not the system font
   return [UIFont boldSystemFontOfSize:font.pointSize];
@@ -200,7 +211,7 @@
 - (void)expandLineWidth:(CGFloat)width {
   _lineWidth += width;
         if (_lineWidth > _minWidth) {
-                _minWidth = _lineWidth;
+                self.minWidth = _lineWidth;
         }
   TTStyledInlineFrame* inlineFrame = _inlineFrame;
   while (inlineFrame) {
@@ -402,7 +413,7 @@
 
   _height += _lineHeight;
         if (_lineWidth > _minWidth) {
-                _minWidth = _lineWidth;
+                self.minWidth = _lineWidth;
         }
   [self checkFloats];
 
@@ -711,13 +722,41 @@
 
   if (!textNode.nextSibling && textNode == _rootNode) {
     // This is the only node, so measure it all at once and move on
-    CGSize textSize = [text sizeWithFont:_font
-                            constrainedToSize:CGSizeMake(_width, CGFLOAT_MAX)
-                            lineBreakMode:UILineBreakModeWordWrap];
+#if 0 // -Elf, fix textSize on iOS7+, testing with @"x <long white space> x"
+          CGSize textSize;
+          if ([NSString instancesRespondToSelector:
+               @selector(boundingRectWithSize:options:attributes:context:)]) {
+                  NSDictionary *attributes =
+                  [NSDictionary dictionaryWithObjectsAndKeys:
+                   _font, NSFontAttributeName, nil];
+                  CGRect textBound =
+                  [text boundingRectWithSize:CGSizeMake(_width, CGFLOAT_MAX)
+                                     options:(NSStringDrawingUsesLineFragmentOrigin |
+                                              NSStringDrawingUsesFontLeading)
+                                  attributes:attributes
+                                     context:nil];
+                  textSize = textBound.size;
+                  textSize = CGSizeMake(ceilf(textSize.width), ceilf(textSize.height));
+
+          } else {
+                  textSize = [text sizeWithFont:_font
+                              constrainedToSize:CGSizeMake(_width, CGFLOAT_MAX)
+                                  lineBreakMode:UILineBreakModeWordWrap];
+          }
+#else
+          CGSize textSize = [text sizeWithFont:_font
+                             constrainedToSize:CGSizeMake(_width, CGFLOAT_MAX)
+                                 lineBreakMode:UILineBreakModeWordWrap];
+#if 1 // -Elf
+          if (textSize.width > _width) {
+                  textSize.width = _width;
+          }
+#endif
+#endif
     [self addFrameForText:text element:element node:textNode width:textSize.width
          height:textSize.height];
     _height += textSize.height;
-          _minWidth += textSize.width;
+          self.minWidth += textSize.width;
     return;
   }
 

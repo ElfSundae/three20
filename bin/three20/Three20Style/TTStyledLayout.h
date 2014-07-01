@@ -56,7 +56,7 @@
 }
 
 @property (nonatomic)           CGFloat         width;
-@property (nonatomic)           CGFloat         minWidth; // -Elf added
+@property (nonatomic, readonly) CGFloat         minWidth; // -Elf added
 @property (nonatomic)           CGFloat         height;
 @property (nonatomic, retain)   UIFont*         font;
 @property (nonatomic)           UITextAlignment textAlignment;

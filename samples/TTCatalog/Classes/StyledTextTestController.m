@@ -111,9 +111,10 @@ Both line break characters\n\nand HTML line breaks<br/>are respected.";
   // XXXjoe This illustrates the need to calculate a line's descender height as well @1079
   // NSString* kText = @"<span class=\"largeText\">bah</span> <span class=\"smallText\">humbug</span>";
         //kText = @"1 1";
+        kText = @"1                                                                                               3";
         TTStyledTextLabel* label1 = [[[TTStyledTextLabel alloc] initWithFrame:self.view.bounds] autorelease];
         label1.font = [UIFont systemFontOfSize:17];
-        label1.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
+        //label1.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
         label1.backgroundColor = [UIColor grayColor];
         //label1.textAlignment = UITextAlignmentCenter;
 
